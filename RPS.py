@@ -67,7 +67,7 @@ if game == "":
             print("-------------------------")
             break
 elif game == "Q":
-    print("Okay")
+    print("Farewell Warrior...")
     print("-------------------------")
 
 elif game == "T":
@@ -81,3 +81,6 @@ elif game == "T":
     print(f"Year/Program/Block: {developer[1]} - {developer[2]} - {developer[3]}")
     print(f"Game name: {developer[-5]}")
     print(f"Date Started: {developer[-4]} {developer[-3]}, {developer[-2]}")
+    
+else: 
+    print("Invalid Input!")
