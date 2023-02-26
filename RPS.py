@@ -9,11 +9,11 @@ print("> Press |Enter| to Continue.")
 print("> Input |Q| to quit the Game")
 print("> Input |T| to know the developer")
 print("---------------------------------")
-game = input("You v/s Computer  -- Who will win? > ")
+game = input("You v/s Computer  -- Who will win? > ").upper()
 print("-------------------------")
 
 if game == "":
-    player = input("What's your name? > ")
+    player = input("What's your name? > ").upper()
     played = player
 
     print("-------------------------")
@@ -38,7 +38,7 @@ if game == "":
         print("--------------------------------")
         computer = random.choice(player_choices)
 
-        player = str(input("Enter your Move > "))
+        player = str(input("Enter your Move > ")).lower()
         print("-------------------------")
         if player == computer:
             print("> Whoa....it's a tie")
@@ -66,6 +66,7 @@ if game == "":
             print("You win...")
             print("-------------------------")
             break
+
 elif game == "Q":
     print("Farewell Warrior...")
     print("-------------------------")
@@ -81,6 +82,6 @@ elif game == "T":
     print(f"Year/Program/Block: {developer[1]} - {developer[2]} - {developer[3]}")
     print(f"Game name: {developer[-5]}")
     print(f"Date Started: {developer[-4]} {developer[-3]}, {developer[-2]}")
-    
+
 else: 
     print("Invalid Input!")
