@@ -30,6 +30,7 @@ if game == "":
     # Variables set to both 0
     player_score = 0
     computer_score = 0
+    game_round = 1 # Counts the Round or the times the program has run in a loop
 
     # While loop
     while player_score or computer_score < 3:
@@ -46,26 +47,29 @@ if game == "":
     
         elif player == "r" and computer == "p" or player == "s" and computer == "r" or player == "p" and computer == "s":
             computer_score = computer_score + 1
-            print(f"> Computer Won... (Round {computer_score})")
+            print(f"> Computer Won... (Round {game_round})")
             print("-------------------------")
             print(f"Computer score is = {computer_score}")
             print("Response: Try Again Human")
             print("--------------------------------")
-        if computer_score == 3:
-            print("I win the game, you cannot defeat me")
-            print("------------------------------------")
+            if computer_score == 3:
+                print("I win the game, you cannot defeat me")
+                print("------------------------------------")
            
-            break
+                break
+            game_round += 1
+
         elif player == "p" and computer == "r" or player == "r" and computer == "s" or player == "s" and computer == "p":
             player_score = player_score + 1
-            print(f"> You won... (Round {player_score})")
+            print(f"> You won... (Round {game_round})")
             print("-------------------------")
             print(f"Your score is = {player_score}")
             print("--------------------------------")
-        if player_score == 3:
-            print("You win...")
-            print("-------------------------")
-            break
+            if player_score == 3:
+                print("You win...")
+                print("-------------------------")
+                break
+            game_round +=1
 
 elif game == "Q":
     print("Farewell Warrior...")
