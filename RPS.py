@@ -42,8 +42,10 @@ if game == "":
         player = str(input("Enter your Move > ")).lower()
         print("-------------------------")
         if player == computer:
+            print(f"(Round {game_round})")
             print("> Whoa....it's a tie")
             print("--------------------------------")
+            game_round += 1
     
         elif player == "r" and computer == "p" or player == "s" and computer == "r" or player == "p" and computer == "s":
             computer_score = computer_score + 1
